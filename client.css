@@ -1,0 +1,154 @@
+  /* Basic styling for the mega menu */
+  .header-menu-wrapper .mega-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .header-menu-wrapper .mega-menu > li {
+    position: relative;
+    margin-right: 5px;
+  }
+  
+  .header-menu-wrapper .mega-menu a {
+    color: #d3cece;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+  }
+  
+  .header-menu-wrapper .mega-menu-content {
+    position: absolute;
+    top: 100%;
+    left: -400px;
+    width: 450%; /* Adjust the width as needed */
+    background-color: #453f3f;
+    display: none;
+    padding: 3px;
+  }
+  
+  .header-menu-wrapper .portfolio-menu-content {
+    position: absolute;
+    top: 100%;
+    left: -600px;
+    width: 800%; /* Adjust the width as needed */
+    background-color: #453f3f;
+    display: none;
+    padding: 3px;
+    text-align: center;
+  }
+  
+  .header-menu-wrapper .about-menu-content {
+    position: absolute;
+    top: 100%;
+    left: -600px;
+    width: 1000%; /* Adjust the width as needed */
+    background-color: #453f3f;
+    display: none;
+    padding: 3px;
+    text-align: center;
+  }
+  
+  /* Show mega menu content on hover */
+  .header-menu-wrapper .mega-dropdown:hover .mega-menu-content {
+    display: flex;
+  }
+  
+  .header-menu-wrapper .mega-dropdown:hover .portfolio-menu-content {
+    display: flex;
+  }
+  
+  .header-menu-wrapper .mega-dropdown:hover .about-menu-content {
+    display: flex;
+  }
+  
+  .mega-dropdown-column {
+    flex: 1;
+  }
+  
+  .mega-dropdown-column h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding: 3px;
+  }
+  
+  .mega-dropdown-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .mega-dropdown-column ul li {
+    padding: 5px 0;
+  }
+  
+  .mega-dropdown-column ul li a {
+    color: #d3cece;
+    text-decoration: none;
+  }
+  
+  .mega-dropdown-column ul li a:hover {
+    color: #0066cc;
+  }
+  
+  /* Media queries for responsive layout */
+  @media (max-width: 768px) {
+    .header-menu-wrapper .mega-menu {
+      flex-direction: column;
+    }
+  
+    .header-menu-wrapper .mega-menu > li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .header-menu-wrapper .mega-menu-content,
+    .header-menu-wrapper .portfolio-menu-content,
+    .header-menu-wrapper .about-menu-content {
+      position: static;
+      width: 100%;
+      background-color: #1b1919;
+      display: none;
+      padding: 3px;
+    }
+  
+    .header-menu-wrapper .mega-dropdown:hover .mega-menu-content,
+    .header-menu-wrapper .mega-dropdown:hover .portfolio-menu-content,
+    .header-menu-wrapper .mega-dropdown:hover .about-menu-content {
+      display: block;
+    }
+  }
+
+  .sub-heading{
+    color:chartreuse;
+  }
+
+
+  /* ****** */
+
+  .animation-line {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+  }
+  
+  .animation-line:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #595a5b;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+  }
+  
+  .animation-line:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
